@@ -29,21 +29,22 @@ namespace LinkedList
             }
 
         }
-        //internal void Display()
-        //{
-        //    Node temp = Head;
-        //    if (temp == null)
-        //        Console.WriteLine("Linked list is empty");
-        //    else
-        //        Console.WriteLine("Linked list");
-        //    while (temp != null)
-        //    {
-        //        Console.WriteLine(temp.data);
-        //        if (temp.next != null)
-        //            Console.WriteLine(">");
-        //        temp = temp.next;
-        //    }
-        //}
+        //uc1,uc5 and uc6(print)
+        internal void Display()
+        {
+            Node temp = Head;
+            if (temp == null)
+                Console.WriteLine("Linked list is empty");
+            else
+                Console.Write("Linked list" );
+            while (temp != null)
+            {
+                Console.Write(temp.data);
+                if (temp.next != null)
+                    Console.Write("->");
+                temp = temp.next;
+            }
+        }
         //uc2
         public void AddatFirst(int element)
         {
@@ -85,49 +86,46 @@ namespace LinkedList
         //uc4
         public void InsertAtMid(int element)
         {
-            if(Head==null)
-                Head=new Node(element);
+            if (Head == null)
+                Head = new Node(element);
             else
             {
-                Node newNode=new Node(element);
+                Node newNode = new Node(element);
                 Node pointer1 = Head;
                 Node pointer2 = Head.next;
-                while(pointer2!=null && pointer2.next != null)
+                while (pointer2 != null && pointer2.next != null)
                 {
                     pointer1 = pointer1.next;
-                    pointer2= pointer2.next.next;
+                    pointer2 = pointer2.next.next;
                 }
-                newNode.next= pointer1.next;
+                newNode.next = pointer1.next;
                 pointer1.next = newNode;
             }
-            
+
 
         }
         //print uc4
         public void Display1()
         {
             Node temp = Head;
-            while(temp!=null)
+            while (temp != null)
             {
                 Console.Write(temp.data + "->");
                 temp = temp.next;
             }
         }
         //uc5
-        public void removeFront()
+        public void removeFront()//deletingNodeAtFirst
         {
-            if(this.Head!=null)
+            if (this.Head != null)
             {
                 Node temp = this.Head;
-                 this.Head = this.Head.next;
+                this.Head = this.Head.next;
                 temp = null;
             }
         }
-        //uc5 print
-        public void pritnList()
-        {
-            Node temp=new Node
-        }
+
 
     }
 }
+
