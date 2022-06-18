@@ -113,6 +113,21 @@ namespace LinkedList
                 temp = temp.next;
             }
         }
+        //uc5
+        public void removeFront()
+        {
+            if(this.Head!=null)
+            {
+                Node temp = this.Head;
+                 this.Head = this.Head.next;
+                temp = null;
+            }
+        }
+        //uc5 print
+        public void pritnList()
+        {
+            Node temp=new Node
+        }
 
     }
 }
