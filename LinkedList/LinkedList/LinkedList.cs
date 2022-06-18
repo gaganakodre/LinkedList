@@ -44,5 +44,23 @@ namespace LinkedList
                 temp = temp.next;
             }
         }
+        public void AddatFirst(int element)
+        {
+            Node newnode = new Node(element);
+            newnode.next = Head;
+            Head = newnode;
+
+
+
+        }
+        public void printList()
+        {
+            Node tnode = Head;
+            while (tnode != null)
+            {
+                Console.WriteLine(tnode.data + " ");
+                tnode = tnode.next;
+            }
+        }
     }
 }
